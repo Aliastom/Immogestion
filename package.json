@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "serve .",
+    "build": "mkdir -p dist && cp -r index.html components utils styles dist/",
     "deploy": "vercel deploy"
   },
   "dependencies": {

@@ -1,17 +1,42 @@
 {
   "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": ".",
+  "public": true,
+  "cleanUrls": true,
   "builds": [
     {
-      "src": "index.html",
+      "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "components/**/*.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "utils/**/*.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "styles/**/*.css",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "handle": "filesystem"
+      "src": "/components/(.*)",
+      "dest": "/components/$1"
     },
     {
-      "src": "/.*",
+      "src": "/utils/(.*)",
+      "dest": "/utils/$1"
+    },
+    {
+      "src": "/styles/(.*)",
+      "dest": "/styles/$1"
+    },
+    {
+      "src": "/(.*)",
       "dest": "/index.html"
     }
   ],
