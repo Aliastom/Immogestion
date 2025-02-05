@@ -1,0 +1,17 @@
+[auth]
+# Enable email confirmations
+enable_email_signup = true
+enable_email_autoconfirm = false
+site_url = "https://qhacidrzsmrbhqczsrqv.supabase.co"
+additional_redirect_urls = ["https://qhacidrzsmrbhqczsrqv.supabase.co/*"]
+
+[auth.email]
+enable_signup = true
+double_confirm_changes = true
+enable_confirmations = true
+
+[storage]
+file_size_limit = "50MB"
+
+[api]
+enabled_apis = ["rest", "realtime", "storage"]
