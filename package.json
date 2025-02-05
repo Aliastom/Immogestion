@@ -2,17 +2,18 @@
   "name": "immogestion",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "start": "serve .",
+    "deploy": "vercel deploy"
+  },
   "dependencies": {
     "@supabase/supabase-js": "^2.39.3",
     "chart.js": "^4.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-  "scripts": {
-    "start": "serve -s .",
-    "build": "echo 'No build step needed'"
-  },
   "devDependencies": {
-    "serve": "^14.2.1"
+    "serve": "^14.2.1",
+    "vercel": "^32.7.2"
   }
 }
